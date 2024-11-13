@@ -1,0 +1,404 @@
+@font-face {
+  font-family: Gelion-Black;
+  src: url(../fonts/Gelion\ Black.woff);
+}
+
+@font-face {
+  font-family: Gelion-Regular;
+  src: url(../fonts/Gelion\ Regular.woff);
+}
+
+@font-face {
+  font-family: Gelion-Light;
+  src: url(../fonts/Gelion\ Light.woff);
+}
+
+@font-face {
+  font-family: Gelion-Medium;
+  src: url(../fonts/Gelion\ Medium.woff);
+}
+
+@font-face {
+  font-family: Gelion-Bold;
+  src: url(../fonts/Gelion\ Bold.woff);
+}
+
+@font-face {
+  font-family: Gelion-Semibold;
+  src: url(../fonts/Gelion\ SemiBold.woff);
+}
+
+:root {
+  --black: #0c0f11;
+  --dark-bg: #0c0f11;
+  --white: #ffffff;
+  --sky-blue: #7abaff;
+  --yellow: #ffd35c;
+  --green: #89e0ba;
+  --title-color: #fd9444;
+  --heading-color: #ffffff;
+  --about-primary-color: #2d0505;
+  --blog_theme: #fc535c;
+
+  --bg-one: #d8e6e6;
+  --grey-bg: #f5f6f7;
+  --bg-two: #000037;
+  --bg-three: #faf0e1;
+  --bg-four: #ffd35c;
+  --footer-bg: #5862ed;
+  --program-theme: #002d2d;
+
+  --gelion-black: "Gelion-Black";
+  --gelion-regular: "Gelion-Regular";
+  --gelion-light: "Gelion-Light";
+  --gelion-medium: "Gelion-Medium";
+  --gelion-bold: "Gelion-Bold";
+  --gelion-semibold: "Gelion-Semibold";
+
+  --h1: 74px;
+  --h2: 34px;
+  --h3: 24px;
+  --h4: 20px;
+  --h5: 18px;
+  --h6: 14px;
+  --text: 15px;
+  --p: 16px;
+  --link: 12px;
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+.apply_popup_form {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #0c0f11c9;
+  padding-top: 60px;
+  z-index: 99;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 6rem;
+  z-index: 999;
+}
+
+.popup_content {
+  background: #f5f6f7;
+  padding: 2rem 1.5rem;
+  max-width: 693px;
+  height: auto;
+}
+
+.popup_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #7070702e;
+}
+
+.popup_logo {
+  width: 160px;
+  margin: 0;
+}
+
+.close_btn i {
+  font-size: 26px;
+  padding: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #000;
+}
+
+.pdf-preview {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.file-name {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.error-msg {
+  margin-top: 10px;
+  font-size: 14px;
+  color: red;
+}
+
+.cancel-upload-btn {
+  margin-top: 15px;
+  padding: 8px 12px;
+  color: red;
+  border-radius: 4px;
+  border: none !important;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.popup_titles {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.popup_titles h1 {
+  font-size: 48px;
+  line-height: 48px;
+  color: #002d2d;
+  font-family: var(--gelion-black);
+}
+
+.popup_titles p {
+  font-size: 18px;
+  color: var(--about-primary-color);
+  opacity: 0.3;
+  line-height: 24px;
+  width: 70%;
+}
+
+.popup_content form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.input_feild {
+  margin-bottom: 20px;
+}
+
+.input_feild p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.more_info {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.flex-apply {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.apply_input_feild {
+  width: 100%;
+}
+
+.popup_content form input,
+.apply_input_feild select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  outline: none;
+  margin: 10px 0;
+  max-width: 316px;
+}
+
+.tag_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  max-width: 316px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.tag .remove_tag {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.apply-form_bottom {
+  border-top: 1px solid #7070702e;
+  margin-top: 50px;
+}
+
+.checkbox_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 31px;
+  margin-bottom: 34px;
+}
+
+.checkbox_container input {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.checkbox_container label {
+  width: 100%;
+  padding-left: 8px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #707070;
+}
+
+.popup_content form button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid var(--black);
+  width: 107px;
+  font-size: 14px;
+  font-family: var(--gelion-black);
+  text-transform: uppercase;
+}
+
+.main_upload_new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 202px;
+  border: 2px dashed #2424241a;
+  width: 100%; /* Make the upload box full width */
+}
+
+.apply_sub_form h3,
+.more_info h3 {
+  font-size: 25px;
+  font-weight: 100;
+  padding-bottom: 4px;
+}
+
+.drop_zone_new {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%; /* Ensure the box takes the full height */
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.upload_content_new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%; /* Full size for preview */
+  position: relative;
+}
+
+/* PDF and Image preview styles */
+.full-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cancel button styling */
+.cancel-upload-btn {
+  position: absolute;
+  top: -15px;
+  right: 0px;
+  color: red;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.upload_content_new i,
+.upload_content_new p {
+  text-align: center;
+  color: #666;
+}
+
+.drop_zone_new p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.drop_zone_new.drag_over_new {
+  border-color: var(--blog_theme);
+  background-color: var(--upload_bg_hover);
+}
+
+#uploadLinkNew {
+  color: #5862ed;
+  text-decoration: underline;
+}
+
+#uploadLinkNew:hover {
+  text-decoration: underline;
+}
+
+.upload_content_new i {
+  font-size: 20px;
+  color: #5862ed;
+}
+
+@media screen and (max-width: 660px) {
+  .apply_popup_form {
+    padding: 1rem;
+  }
+
+  .popup_logo {
+    width: 120px;
+  }
+
+  .close_btn i {
+    font-size: 22px;
+  }
+
+  .popup_titles h1 {
+    font-size: 34px;
+    line-height: 34px;
+  }
+
+  .popup_titles p {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .apply_popup_form {
+    padding: 0.5rem;
+  }
+
+  .popup_titles h1 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .popup_titles p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .popup_content form input,
+  .popup_content form select {
+    max-width: 100%;
+  }
+
+  .tag_container {
+    max-width: 100%;
+  }
+}
